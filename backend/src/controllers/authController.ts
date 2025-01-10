@@ -92,7 +92,11 @@ export const login = async (
   }
 };
 
-export const protect = async (req: any, res: Response, next: NextFunction) => {
+export const protect = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     let token;
     if (
@@ -112,8 +116,11 @@ export const protect = async (req: any, res: Response, next: NextFunction) => {
         id: (decodedData as JwtPayload).id,
       },
     });
+    if (!freshUser) {
+      res.status(401).json({ error: "User does not exist!" });
+    }
+    if (freshUser) req.user = freshUser;
 
-    req.user = freshUser;
     next();
   } catch (err) {
     res.status(401).json({ error: "Invalid token!" });
