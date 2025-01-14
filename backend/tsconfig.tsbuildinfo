@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/override.d.ts","./src/controllers/authController.ts","./src/routes/userRoutes.ts","./src/utils/utils.ts"],"errors":true,"version":"5.6.2"}
+{"root":["./src/index.ts","./src/types.d.ts","./src/controllers/authController.ts","./src/controllers/contentController.ts","./src/controllers/linkController.ts","./src/controllers/tagController.ts","./src/routes/contentRoutes.ts","./src/routes/linkRoutes.ts","./src/routes/tagRoutes.ts","./src/routes/userRoutes.ts","./src/utils/utils.ts"],"version":"5.6.2"}
