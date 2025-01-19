@@ -31,7 +31,7 @@ const createSendToken = (user: any, statusCode: number, res: Response) => {
   });
 };
 export const signup = async (req: Request, res: Response) => {
-  const { username, password } = req.body;
+  const { username, password } = req.body.data;
   //Input validation
   const regex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
@@ -69,7 +69,7 @@ export const login = async (
   res: Response,
   next: NextFunction
 ) => {
-  const { username, password } = req.body;
+  const { username, password } = req.body.data;
   const user = await prisma.user.findFirst({
     where: {
       username: username,
