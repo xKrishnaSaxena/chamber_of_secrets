@@ -73,7 +73,7 @@ export const shareLink = async (req: Request, res: Response) => {
 
   if (!user) {
     res.status(411).json({
-      message: "user not found, error should ideally not happen",
+      message: "user not found",
     });
     return;
   }
