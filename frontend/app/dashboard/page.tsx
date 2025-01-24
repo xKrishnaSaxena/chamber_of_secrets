@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
@@ -9,7 +10,7 @@ import { useContent } from "../../hooks/useContent";
 const BACKEND_URL = "http://localhost:5000";
 import axios from "axios";
 
-export function Dashboard() {
+export default function Dashboard() {
   const [modalOpen, setModalOpen] = useState(false);
   const { contents, refresh } = useContent();
 

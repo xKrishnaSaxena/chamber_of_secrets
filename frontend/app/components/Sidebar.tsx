@@ -10,7 +10,7 @@ export function Sidebar() {
         <div className="pr-2 text-purple-600">
           <Logo />
         </div>
-        Brainly
+        Chamber of Secrets
       </div>
       <div className="pt-8 pl-4">
         <SidebarElement text="Twitter" icon={<Twitter />} />
